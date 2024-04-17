@@ -819,7 +819,7 @@ body{
     background-image: url(./images/rooms-bg.png);
     background-position: center center;
     background-repeat: repeat;
-    top:120rem;
+    top:0;
     left:0;
     height: 100%;
     width: 100%;
@@ -982,6 +982,7 @@ body{
 }
 .chooseroom-price .chooseroom-right p ,.chooseroom-price .chooseroom-right button{
     font-size: 1.3rem;
+    cursor: pointer;
 }
 
 .chooseroom-right p{
@@ -998,14 +999,15 @@ body{
     border-radius: 1rem;
     color: white;
     font-weight: 600;
+
 }
 
 /* 購物車總計 */
 .section-cartsum .container{
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-end;
 }
-.cartsum-txt{
+/* .cartsum-txt{
     background-color: #2c3a3a;
     width: 40rem;
     height: 25rem;
@@ -1014,7 +1016,7 @@ body{
     border-radius: 1rem;
     margin:10rem 0;
     font-weight: 600
-}
+} */
 .cartsum-txt p:nth-child(2),.cartsum-txt p:nth-childp:nth-child(3){
     border-bottom: 0.15rem solid white;
     width: 85%;
@@ -1036,6 +1038,7 @@ padding: 3rem 1rem;
     border-radius: 1rem;
     color: white;
     font-weight: 600;
+    cursor: pointer;
 }
 
 
@@ -1084,6 +1087,7 @@ padding: 3rem 1rem;
     height: 8rem;
     border-radius: 0.5rem;
     outline: none;
+    resize: none;
 }
 .contactus-button{
     text-align: center;
@@ -1098,6 +1102,7 @@ padding: 3rem 1rem;
     outline: none;
     border-radius: 0.5rem;
     letter-spacing: 0.2rem;
+    cursor: pointer;
 }
 
 /* 聯絡我們背景圖 */
@@ -1132,4 +1137,86 @@ padding: 3rem 1rem;
 }
 .contactus-map{
     padding:10rem 0;
+}
+
+/* 結帳畫面 */
+.section-checkout{
+    margin-top: 13rem;
+}
+.wrap-left-pic img{
+    object-fit: cover;
+    width: 17rem;
+    height: 10rem;
+}
+
+.section-checkout .wrap{
+    margin:auto;
+    padding: 2rem;
+    width: 80rem;
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+.section-checkout .wrap::after{
+    content: "";
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-image: url(./images/contactusbg.jpg);
+    /* 加入模糊 */
+    filter: blur(3px);
+    z-index: -1;
+}
+
+.section-checkout .wrap-left,.section-checkout .wrap-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(255, 252, 252);
+    padding: 3.5rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.section-checkout p,label{
+    font-size: 1.4rem;
+}
+.section-checkout label{
+    margin-right: 0.3rem;
+}
+.section-checkout .wrap-left input,.section-checkout .wrap-right input{
+    outline: none;
+}
+.card-number{
+    display: flex;
+    align-items: center;
+}
+.card-number i{
+    font-size: 2rem;
+    margin-left: 0.5rem;
+}
+
+.wrap-right button{
+    padding: 0.5rem 1.3rem;
+    border: none;
+    background-color: #dc733a;
+    border-radius: 1rem;
+    color: white;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+.wrap-left p:nth-child(1){
+    font-style: 2;
+    font-weight: 600;
+}
+.wrap-left-price{
+    display: flex;
+    justify-content: space-between;
 }
